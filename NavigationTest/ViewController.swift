@@ -8,6 +8,16 @@
 
 import UIKit
 
+final class GlobalCounter {
+  static let shared = GlobalCounter()
+  
+  var count: Int
+  
+  private init() {
+    count = 0
+  }
+}
+
 extension UIViewController {
   private static func instantiateFromStoryboardPrivate<T: UIViewController>() -> T {
     let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)

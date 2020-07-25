@@ -26,6 +26,7 @@ class OptNavigationController<T>: UINavigationController {
     modelsStack.append(model)
     viewControllers = viewControllers.suffix(1)
     super.pushViewController(viewController, animated: animated)
+    print(modelsStack.count)
   }
   
   override func popViewController(animated: Bool) -> UIViewController? {
@@ -39,6 +40,7 @@ class OptNavigationController<T>: UINavigationController {
     let viewControllerForLastButOneModel = viewControllerCreation(from: lastButOneModel)
     insertInTheBeginningOfNavigationStack(viewController: viewControllerForLastButOneModel)
 
+    print(modelsStack.count)
     return lastViewController
   }
   

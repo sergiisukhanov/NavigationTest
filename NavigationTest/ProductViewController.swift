@@ -36,6 +36,20 @@ class ProductViewController: UIViewController {
     collectionView.dataSource = self
     collectionView.delegate = self
   }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    if GlobalCounter.shared.count < 1000 {
+      GlobalCounter.shared.count += 1
+      let indexPath = IndexPath(row: 0, section: 0)
+      collectionView(collectionView, didSelectItemAt: indexPath)
+    } else {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        self.navigationController?.popViewController(animated: true)
+      }
+    }
+  }
 }
 
 extension ProductViewController: UICollectionViewDataSource {
