@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B276918A24CB0F98004C91FB /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276918924CB0F98004C91FB /* ProductViewController.swift */; };
+		B276918C24CB0FA3004C91FB /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B276918B24CB0FA3004C91FB /* ProductViewController.storyboard */; };
 		B276918E24CB1720004C91FB /* OptNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276918D24CB1720004C91FB /* OptNavigationController.swift */; };
+		B2AA59FF24CB0A41002AF118 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA59FE24CB0A41002AF118 /* ProductModel.swift */; };
+		B2AA5A0124CB0BCB002AF118 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA5A0024CB0BCB002AF118 /* ProductCell.swift */; };
 		B2CFBD6024B2408F0089CA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CFBD5F24B2408F0089CA47 /* AppDelegate.swift */; };
 		B2CFBD6224B2408F0089CA47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CFBD6124B2408F0089CA47 /* SceneDelegate.swift */; };
 		B2CFBD6424B2408F0089CA47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CFBD6324B2408F0089CA47 /* ViewController.swift */; };
@@ -17,7 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B276918924CB0F98004C91FB /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		B276918B24CB0FA3004C91FB /* ProductViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
 		B276918D24CB1720004C91FB /* OptNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptNavigationController.swift; sourceTree = "<group>"; };
+		B2AA59FE24CB0A41002AF118 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B2AA5A0024CB0BCB002AF118 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B2CFBD5C24B2408F0089CA47 /* NavigationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CFBD5F24B2408F0089CA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CFBD6124B2408F0089CA47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				B276918D24CB1720004C91FB /* OptNavigationController.swift */,
 				B2CFBD6324B2408F0089CA47 /* ViewController.swift */,
 				B2CFBD6524B2408F0089CA47 /* Main.storyboard */,
+				B2AA5A0024CB0BCB002AF118 /* ProductCell.swift */,
+				B2AA59FE24CB0A41002AF118 /* ProductModel.swift */,
+				B276918924CB0F98004C91FB /* ProductViewController.swift */,
+				B276918B24CB0FA3004C91FB /* ProductViewController.storyboard */,
 				B2CFBD6824B240980089CA47 /* Assets.xcassets */,
 				B2CFBD6A24B240980089CA47 /* LaunchScreen.storyboard */,
 				B2CFBD6D24B240980089CA47 /* Info.plist */,
@@ -130,6 +142,7 @@
 			files = (
 				B2CFBD6C24B240980089CA47 /* LaunchScreen.storyboard in Resources */,
 				B2CFBD6924B240980089CA47 /* Assets.xcassets in Resources */,
+				B276918C24CB0FA3004C91FB /* ProductViewController.storyboard in Resources */,
 				B2CFBD6724B2408F0089CA47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B276918A24CB0F98004C91FB /* ProductViewController.swift in Sources */,
 				B2CFBD6424B2408F0089CA47 /* ViewController.swift in Sources */,
 				B2CFBD6024B2408F0089CA47 /* AppDelegate.swift in Sources */,
+				B2AA5A0124CB0BCB002AF118 /* ProductCell.swift in Sources */,
 				B2CFBD6224B2408F0089CA47 /* SceneDelegate.swift in Sources */,
+				B2AA59FF24CB0A41002AF118 /* ProductModel.swift in Sources */,
 				B276918E24CB1720004C91FB /* OptNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
