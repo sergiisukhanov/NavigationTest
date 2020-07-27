@@ -50,10 +50,10 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let productModel = productsModel[indexPath.row]
-    let productViewController = ProductViewController.instantiate(with: productModel)
-    let navigationController = OptNavigationController(rootViewController: productViewController,
-                                                       model: productModel,
-                                                       viewControllerCreation: { productModel in ProductViewController.instantiate(with: productModel) })
+    let navigationController = OptNavigationController(
+      rootModel: productModel,
+      viewControllerCreation: { productModel in ProductViewController.instantiate(with: productModel) }
+    )
     present(navigationController, animated: true)
   }
 }

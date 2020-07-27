@@ -9,22 +9,23 @@
 import UIKit
 
 class OptNavigationController<T>: UINavigationController {
-  typealias ViewControllerCreation = (T) -> UIViewController?
+  typealias ViewControllerCreation = (T) -> UIViewController
   
   private var modelsStack: [T] = []
-  private var viewControllerCreation: ViewControllerCreation = { _ in nil }
+  private var viewControllerCreation: ViewControllerCreation = { _ in UIViewController() }
 
-  convenience init(rootViewController: UIViewController,
-                   model: T,
-                   viewControllerCreation: @escaping ViewControllerCreation) {
+  convenience init(rootModel: T, viewControllerCreation: @escaping ViewControllerCreation) {
+    let rootViewController = viewControllerCreation(rootModel)
     self.init(rootViewController: rootViewController)
-    modelsStack = [model]
+    
+    modelsStack = [rootModel]
     self.viewControllerCreation = viewControllerCreation
   }
   
-  func pushViewController(_ viewController: UIViewController, with model: T, animated: Bool) {
+  func pushViewController(with model: T, animated: Bool) {
     modelsStack.append(model)
     viewControllers = viewControllers.suffix(1)
+    let viewController = viewControllerCreation(model)
     super.pushViewController(viewController, animated: animated)
   }
   
