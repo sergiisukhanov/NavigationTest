@@ -71,8 +71,7 @@ extension ProductViewController: UICollectionViewDataSource {
 extension ProductViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let productModel = recommendedProducts[indexPath.row]
-    let productViewController = ProductViewController.instantiate(with: productModel)
-    optNavigationController?.pushViewController(productViewController, with: productModel, animated: true)
+    optNavigationController?.pushViewController(with: productModel, animated: true)
   }
 }
 
