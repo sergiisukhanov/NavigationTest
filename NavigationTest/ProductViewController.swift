@@ -40,7 +40,7 @@ class ProductViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    if GlobalCounter.shared.count < 900 {
+    if GlobalCounter.shared.count < 1000 {
       GlobalCounter.shared.count += 1
       let indexPath = IndexPath(row: 0, section: 0)
       collectionView(collectionView, didSelectItemAt: indexPath)
